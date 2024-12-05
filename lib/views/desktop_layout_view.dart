@@ -1,3 +1,4 @@
+import 'package:adaptive_responsive_ui/widgets/all_expenses.dart';
 import 'package:adaptive_responsive_ui/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class DeskTopLayoutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Color(0xffF7F9FA),
       body: Row(
         children: [
           Expanded(
@@ -15,9 +17,11 @@ class DeskTopLayoutView extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: Column(
-              children: [Text("data")],
-            ),
+            child: AllExpenses(),
+          ),
+          Expanded(
+            flex: 1,
+            child: Column(),
           )
         ],
       ),

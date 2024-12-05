@@ -23,7 +23,9 @@ class DrawerItem extends StatelessWidget {
       trailing: Container(
         height: 48,
         width: 3,
-        color: isActive ? const Color(0xff4EB7F2) : Colors.transparent,
+        color: isActive
+            ? const Color(0xff4EB7F2)
+            : const Color.fromARGB(0, 171, 114, 114),
       ),
     );
   }
