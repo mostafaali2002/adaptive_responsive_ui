@@ -13,28 +13,37 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      child: Column(
-        children: [
-          const UserInfoTile(
-            title: "Lekan Okeowo",
-            icon: Assets.drawerImage,
-            subtitle: "demo@gmail.com",
-          ),
-          const SizedBox(height: 8),
-          const DrawerItemList(),
-          const Expanded(child: SizedBox()),
-          DrawerItem(
-              drawerItemModel:
-                  DrawerItemModel(title: "Setting", icon: Assets.setting),
-              isActive: false),
-          const SizedBox(height: 15),
-          DrawerItem(
-              drawerItemModel:
-                  DrawerItemModel(title: "Logout", icon: Assets.logout),
-              isActive: false),
-        ],
-      ),
-    );
+        color: Colors.white,
+        child: CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(
+              child: UserInfoTile(
+                title: "Lekan Okeowo",
+                icon: Assets.drawerImage,
+                subtitle: "demo@gmail.com",
+              ),
+            ),
+            const SliverToBoxAdapter(child: SizedBox(height: 8)),
+            const SliverToBoxAdapter(child: DrawerItemList()),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  const Expanded(child: SizedBox()),
+                  DrawerItem(
+                      drawerItemModel: DrawerItemModel(
+                          title: "Setting", icon: Assets.setting),
+                      isActive: false),
+                  const SizedBox(height: 15),
+                  DrawerItem(
+                      drawerItemModel:
+                          DrawerItemModel(title: "Logout", icon: Assets.logout),
+                      isActive: false),
+                  const SizedBox(height: 40),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }
