@@ -1,4 +1,5 @@
 import 'package:adaptive_responsive_ui/widgets/all_expenses_header.dart';
+import 'package:adaptive_responsive_ui/widgets/all_expenses_item_list.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -18,6 +19,9 @@ class AllExpenses extends StatelessWidget {
               header: "All Expenses",
               monthly: "Monthly",
             ),
+            SizedBox(height: 16),
+            AllExpensesItemList(),
+            SizedBox(height: 24),
           ],
         ),
       ),
