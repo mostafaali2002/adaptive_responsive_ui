@@ -1,4 +1,5 @@
 import 'package:adaptive_responsive_ui/models/drawer_item_model.dart';
+import 'package:adaptive_responsive_ui/models/user_info_model.dart';
 import 'package:adaptive_responsive_ui/utils/assets.dart';
 import 'package:adaptive_responsive_ui/widgets/drawer_item.dart';
 import 'package:adaptive_responsive_ui/widgets/drawer_item_list.dart';
@@ -17,9 +18,10 @@ class CustomDrawer extends StatelessWidget {
           slivers: [
             const SliverToBoxAdapter(
               child: UserInfoTile(
-                title: "Lekan Okeowo",
-                icon: Assets.drawerImage,
-                subtitle: "demo@gmail.com",
+                userInfoModel: UserInfoModel(
+                    icon: Assets.drawerImage,
+                    name: "Lekan Okeowo",
+                    email: "demo@gmail.com"),
               ),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 8)),

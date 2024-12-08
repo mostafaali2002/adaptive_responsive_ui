@@ -1,5 +1,5 @@
-import 'package:adaptive_responsive_ui/widgets/all_expenses_header.dart';
-import 'package:adaptive_responsive_ui/widgets/all_expenses_item_list.dart';
+import 'package:adaptive_responsive_ui/widgets/all_expenses_section.dart';
+import 'package:adaptive_responsive_ui/widgets/quick_invoice.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -9,21 +9,14 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 32),
-      child: Container(
-        color: Colors.white,
-        child: const Column(
-          children: [
-            AllExpensesHeader(
-              header: "All Expenses",
-              monthly: "Monthly",
-            ),
-            SizedBox(height: 16),
-            AllExpensesItemList(),
-            SizedBox(height: 24),
-          ],
-        ),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 32),
+      child: Column(
+        children: [
+          AllExpensesSection(),
+          SizedBox(height: 24),
+          QuickInVoice(),
+        ],
       ),
     );
   }
