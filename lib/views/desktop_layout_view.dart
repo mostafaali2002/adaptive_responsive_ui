@@ -1,5 +1,6 @@
 import 'package:adaptive_responsive_ui/widgets/all_expenses.dart';
 import 'package:adaptive_responsive_ui/widgets/custom_drawer.dart';
+import 'package:adaptive_responsive_ui/widgets/my_card_and_transaction_and_incom_sections.dart';
 import 'package:flutter/material.dart';
 
 class DeskTopLayoutView extends StatelessWidget {
@@ -15,13 +16,15 @@ class DeskTopLayoutView extends StatelessWidget {
             flex: 1,
             child: CustomDrawer(),
           ),
+          SizedBox(width: 32),
           Expanded(
-            flex: 3,
+            flex: 2,
             child: AllExpenses(),
           ),
+          SizedBox(width: 24),
           Expanded(
             flex: 1,
-            child: Column(),
+            child: MyCardAndTransactionAndIncomSections(),
           )
         ],
       ),

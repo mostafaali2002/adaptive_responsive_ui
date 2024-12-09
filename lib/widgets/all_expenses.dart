@@ -9,15 +9,12 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32),
-      child: Column(
-        children: [
-          AllExpensesSection(),
-          SizedBox(height: 24),
-          QuickInVoice(),
-        ],
-      ),
+    return const Column(
+      children: [
+        AllExpensesSection(),
+        SizedBox(height: 24),
+        QuickInVoice(),
+      ],
     );
   }
 }

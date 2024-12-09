@@ -37,11 +37,11 @@ class QuickInVoice extends StatelessWidget {
                 textFieldTwoHeader: "Customer Email",
                 textFieldTwoHint: "Type customer Email"),
             SizedBox(height: 10),
-            QuickInvoiceForm(
-                textFieldOneHeader: "Item name",
-                textFieldOneHint: "Type customer name",
-                textFieldTwoHeader: "Item mount",
-                textFieldTwoHint: "USD"),
+            // QuickInvoiceForm(
+            //     textFieldOneHeader: "Item name",
+            //     textFieldOneHint: "Type customer name",
+            //     textFieldTwoHeader: "Item mount",
+            //     textFieldTwoHint: "USD"),
             SizedBox(height: 20),
             QuickInvoiceButtons()
           ],
