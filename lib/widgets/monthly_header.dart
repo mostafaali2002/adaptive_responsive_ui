@@ -18,7 +18,7 @@ class MonthlyHeader extends StatelessWidget {
           border: Border.all(color: Colors.black.withOpacity(0.2))),
       child: Padding(
         padding:
-            const EdgeInsets.only(top: 14, bottom: 14, right: 12, left: 12),
+            const EdgeInsets.only(top: 10, bottom: 10, right: 12, left: 12),
         child: Row(
           children: [
             Text(
