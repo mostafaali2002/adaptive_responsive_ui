@@ -10,9 +10,9 @@ class AdaptiveLayout extends StatelessWidget {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth > 600 && constraints.maxWidth < 900) {
+          if (constraints.maxWidth > 600 && constraints.maxWidth < 1300) {
             return Placeholder();
-          } else if (constraints.maxWidth > 900) {
+          } else if (constraints.maxWidth > 1300) {
             return DeskTopLayoutView();
           } else {
             return MobileLayout();

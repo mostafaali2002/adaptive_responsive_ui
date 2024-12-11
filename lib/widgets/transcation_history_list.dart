@@ -11,7 +11,7 @@ class TransactionHistoryList extends StatelessWidget {
       children: List.generate(
           transactionItem.length,
           (index) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 child: TransactionListTile(
                   transactionModel: transactionItem[index],
                 ),
