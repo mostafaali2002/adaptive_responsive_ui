@@ -1,20 +1,23 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
-double getResponsiveFont(BuildContext context, {required double fontSize}) {
-  double scalFactor = getScale(context);
+double getResponsiveFont({required double fontSize}) {
+  double scalFactor = getScale();
   double responsiveSize = fontSize * scalFactor;
   double lowLimit = fontSize * .8;
   double upperLimit = fontSize * 1.2;
   return responsiveSize.clamp(lowLimit, upperLimit);
 }
 
-double getScale(BuildContext context) {
-  double width = MediaQuery.sizeOf(context).width;
-  if (width < 600) {
-    return width / 400; //400---> MobileLayout
-  } else if (width < 900) {
-    return width / 700; //700-->TabletLayout
+double getScale() {
+  var dispatcher = PlatformDispatcher.instance;
+  var physicalWidth = dispatcher.views.first.physicalSize.width;
+  var deviceRatio = dispatcher.views.first.devicePixelRatio;
+  double width = physicalWidth / deviceRatio;
+  if (width < 800) {
+    return width / 550; //400---> MobileLayout
+  } else if (width < 1200) {
+    return width / 1000; //700-->TabletLayout
   } else {
-    return width / 1000;
+    return width / 1500;
   }
 }

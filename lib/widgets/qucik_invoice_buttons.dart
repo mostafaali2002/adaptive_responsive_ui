@@ -12,12 +12,12 @@ class QuickInvoiceButtons extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CustomButton(
+        CustomButton(
           colorValue: 0xffFFFFFF,
           text: "Add more details",
           style: AppStyle.kStyleSemiBold18,
         ),
-        Expanded(
+        const Expanded(
           child: SizedBox(),
         ),
         CustomButton(

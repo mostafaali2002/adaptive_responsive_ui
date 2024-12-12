@@ -11,14 +11,22 @@ class TransactionListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        transactionModel.title,
-        style: AppStyle.kStyleSemiBold16,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          transactionModel.title,
+          style: AppStyle.kStyleSemiBold16,
+        ),
       ),
-      subtitle: Text(
-        transactionModel.subtitle,
-        style: AppStyle.kStyleReguler16.copyWith(
-          color: const Color(0xffAAAAAA),
+      subtitle: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          transactionModel.subtitle,
+          style: AppStyle.kStyleReguler16.copyWith(
+            color: const Color(0xffAAAAAA),
+          ),
         ),
       ),
       trailing: Text(

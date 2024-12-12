@@ -12,37 +12,37 @@ class QuickInVoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 15),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            QuickInvoiceHeader(),
-            SizedBox(height: 18),
+            const QuickInvoiceHeader(),
+            const SizedBox(height: 18),
             Text(
               "Latest Transaction",
               style: AppStyle.kStyleMeduim16,
             ),
-            SizedBox(height: 12),
-            LatestTransactionList(),
-            SizedBox(height: 12),
-            Divider(
+            const SizedBox(height: 12),
+            const LatestTransactionList(),
+            const SizedBox(height: 12),
+            const Divider(
               height: 2,
               color: Color(0xffF1F1F1),
             ),
-            SizedBox(height: 15),
-            QuickInvoiceForm(
+            const SizedBox(height: 15),
+            const QuickInvoiceForm(
                 textFieldOneHeader: "Customer name",
                 textFieldOneHint: "Type customer name",
                 textFieldTwoHeader: "Customer Email",
                 textFieldTwoHint: "Type customer Email"),
-            SizedBox(height: 10),
-            QuickInvoiceForm(
+            const SizedBox(height: 10),
+            const QuickInvoiceForm(
                 textFieldOneHeader: "Item name",
                 textFieldOneHint: "Type customer name",
                 textFieldTwoHeader: "Item mount",
                 textFieldTwoHint: "USD"),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             QuickInvoiceButtons()
           ],
         ),
