@@ -1,4 +1,3 @@
-import 'package:adaptive_responsive_ui/utils/app_style.dart';
 import 'package:adaptive_responsive_ui/widgets/all_expenses_header.dart';
 import 'package:adaptive_responsive_ui/widgets/income_chart.dart';
 import 'package:adaptive_responsive_ui/widgets/income_information_list.dart';
@@ -11,14 +10,32 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          children: [
+            AllExpensesHeader(header: "Income", monthly: "monthly"),
+            IncomeSectionBody()
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class IncomeSectionBody extends StatelessWidget {
+  const IncomeSectionBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Row(
         children: [
-          // AllExpensesHeader(header: "Income", monthly: "monthly"),
-          // Expanded(
-          //   child: IcomeChart(),
-          // ),
-          IncomeInformationList()
+          Expanded(child: IcomeChart()),
+          SizedBox(width: 40),
+          Expanded(child: IncomeInformationList()),
         ],
       ),
     );

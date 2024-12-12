@@ -33,20 +33,7 @@ class _MyCardAndTransactionAndIncomSectionsState
         MyCardAndTransactionSection(
             pageController: pageController, currentPage: currentPage),
         const SizedBox(height: 20),
-        Expanded(
-          child: Row(
-            children: [
-              Container(
-                height: 120,
-                width: 120,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.amber),
-              ),
-              SizedBox(width: 40),
-              Expanded(child: IncomeSection()),
-            ],
-          ),
-        ),
+        // Expanded(child: IncomeSection()),
       ],
     );
   }

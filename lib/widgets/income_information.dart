@@ -10,27 +10,30 @@ class IncomeInformation extends StatelessWidget {
   final IncomeInformationModel incomeInformationModel;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 12,
-          width: 12,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: incomeInformationModel.color,
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Row(
+        children: [
+          Container(
+            height: 12,
+            width: 12,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: incomeInformationModel.color,
+            ),
           ),
-        ),
-        const SizedBox(width: 12),
-        Text(
-          incomeInformationModel.title,
-          style: AppStyle.kStyleReguler16,
-        ),
-        Expanded(child: SizedBox()),
-        Text(
-          incomeInformationModel.percent,
-          style: AppStyle.kStyleMeduim16,
-        ),
-      ],
+          const SizedBox(width: 12),
+          Text(
+            incomeInformationModel.title,
+            style: AppStyle.kStyleReguler16,
+          ),
+          Expanded(child: SizedBox()),
+          Text(
+            incomeInformationModel.percent,
+            style: AppStyle.kStyleMeduim16,
+          ),
+        ],
+      ),
     );
   }
 }

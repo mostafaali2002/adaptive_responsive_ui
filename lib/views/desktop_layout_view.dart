@@ -13,19 +13,31 @@ class DeskTopLayoutView extends StatelessWidget {
       body: Row(
         children: [
           Expanded(
-            flex: 1,
             child: CustomDrawer(),
           ),
           SizedBox(width: 32),
           Expanded(
-            flex: 2,
-            child: AllExpenses(),
-          ),
-          SizedBox(width: 24),
-          Expanded(
-            flex: 1,
-            child: MyCardAndTransactionAndIncomSections(),
-          )
+              flex: 3,
+              child: CustomScrollView(
+                scrollDirection: Axis.vertical,
+                slivers: [
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: AllExpenses(),
+                        ),
+                        SizedBox(width: 24),
+                        Expanded(
+                          child: MyCardAndTransactionAndIncomSections(),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ))
         ],
       ),
     );

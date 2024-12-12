@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
       onTap: () {},
       child: Container(
         padding:
-            const EdgeInsets.only(right: 75, left: 75, top: 20, bottom: 20),
+            const EdgeInsets.only(right: 50, left: 50, top: 20, bottom: 20),
         decoration: BoxDecoration(
           color: Color(colorValue),
           borderRadius: BorderRadius.circular(15),

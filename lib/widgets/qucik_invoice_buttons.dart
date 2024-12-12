@@ -10,13 +10,16 @@ class QuickInvoiceButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const CustomButton(
           colorValue: 0xffFFFFFF,
           text: "Add more details",
           style: AppStyle.kStyleSemiBold18,
         ),
-        const SizedBox(width: 24),
+        Expanded(
+          child: SizedBox(),
+        ),
         CustomButton(
           colorValue: 0xff4EB7F2,
           text: "Send Money",
