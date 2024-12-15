@@ -38,7 +38,7 @@ class AllExpensesItemHeader extends StatelessWidget {
         ),
         Icon(
           Icons.arrow_forward_ios,
-          color: isActive ? Colors.white : Color(0xff064061),
+          color: isActive ? Colors.white : const Color(0xff064061),
         )
       ],
     );

@@ -33,7 +33,7 @@ class _MyCardAndTransactionAndIncomSectionsState
         MyCardAndTransactionSection(
             pageController: pageController, currentPage: currentPage),
         const SizedBox(height: 20),
-        // Expanded(child: IncomeSection()),
+        Expanded(child: IncomeSection()),
       ],
     );
   }

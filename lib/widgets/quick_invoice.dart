@@ -43,7 +43,7 @@ class QuickInVoice extends StatelessWidget {
                 textFieldTwoHeader: "Item mount",
                 textFieldTwoHint: "USD"),
             const SizedBox(height: 20),
-            QuickInvoiceButtons()
+            const QuickInvoiceButtons()
           ],
         ),
       ),

@@ -19,26 +19,27 @@ class _AdaptiveLayoutState extends State<AdaptiveLayout> {
       key: key,
       appBar: MediaQuery.sizeOf(context).width < 800
           ? AppBar(
-              backgroundColor: Color(0xffAAAAAA),
+              backgroundColor: const Color(0xffAAAAAA),
               leading: IconButton(
                   onPressed: () {
                     key.currentState!.openDrawer();
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.menu,
                     color: Colors.black,
                   )),
             )
           : null,
-      drawer: MediaQuery.sizeOf(context).width < 800 ? CustomDrawer() : null,
+      drawer:
+          MediaQuery.sizeOf(context).width < 800 ? const CustomDrawer() : null,
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-            return TabletLayout();
+            return const TabletLayout();
           } else if (constraints.maxWidth > 1200) {
-            return DeskTopLayoutView();
+            return const DeskTopLayoutView();
           } else {
-            return MobileLayoutView();
+            return const MobileLayoutView();
           }
         },
       ),

@@ -21,16 +21,16 @@ class MyCardAndTransactionSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             MyCardSection(
                 pageController: pageController, currentPage: currentPage),
-            SizedBox(height: 20),
-            Divider(
+            const SizedBox(height: 20),
+            const Divider(
               height: 2,
               color: Color(0xffF1F1F1),
             ),
-            SizedBox(height: 20),
-            TransactionHistorySection(),
+            const SizedBox(height: 20),
+            const TransactionHistorySection(),
           ],
         ),
       ),

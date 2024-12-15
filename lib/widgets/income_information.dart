@@ -27,7 +27,7 @@ class IncomeInformation extends StatelessWidget {
             incomeInformationModel.title,
             style: AppStyle.kStyleReguler16,
           ),
-          Expanded(child: SizedBox()),
+          const Expanded(child: SizedBox()),
           Text(
             incomeInformationModel.percent,
             style: AppStyle.kStyleMeduim16,

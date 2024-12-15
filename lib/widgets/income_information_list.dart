@@ -8,13 +8,17 @@ class IncomeInformationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(
-        incomInformation.length,
-        (index) => IncomeInformation(
-          incomeInformationModel: incomInformation[index],
-        ),
-      ),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: incomInformation
+          .map((e) => IncomeInformation(incomeInformationModel: e))
+          .toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: incomInformation.length,
+    //   itemBuilder: (context, index) {
+    //     return IncomeInformation(incomeInformationModel: incomInformation[index]);
+    //   },
+    // );
   }
 }
